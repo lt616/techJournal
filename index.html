@@ -21,8 +21,23 @@
 		</dl>
 	</div>
 
-	<script type="text/javascript" src="/bootstrap/jquery-2.1.4.min.js">
+	<script type="text/javascript" src="/bootstrap/scripts/jquery-2.1.4.min.js">
 	alert("Yes");
+	$(function() {
+		$( "#dialog-confirm").dialog({
+			resizable: false,
+			height: 140,
+			modal: true;
+			buttons: {
+				"Yes": function() {
+					$(this).dialog("close");
+				},
+				"No": function() {
+					$(this).dialog("close");
+				}
+			}
+		});
+	});
 	</script>
 </body>
 </html>
