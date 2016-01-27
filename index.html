@@ -22,13 +22,12 @@
 			<dt> <a href="27-01-2016.html"> 27-01-2016 </a> </dt>
 			<dd> JAVA - Read/write a .csv file </dd>
 		</dl>
-		<img src="bootstrap/scripts/1.png"/>
 	</div>
 
 	<div>
 
 	<div id="dialog-confirm" title="Empty the recycle bin?">
-  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span> David, Cherry was in a mess yesterday and forgot to say good night to you :( Can you forgive he? </p>
 	</div>
 </div>
 
@@ -40,10 +39,10 @@
       modal: true,
       buttons: {
         "Delete all items": function() {
-          $( this ).dialog( "close" );
+          $( this ).dialog( "OK ~ I still love her :)" );
         },
         Cancel: function() {
-          $( this ).dialog( "close" );
+          $( this ).dialog( "No, I won't forgive her, I won't talk with her any more!" );
           document.getElementsByClassName("container")[0].innerHTML = "<h2>Bad answer! You can see nothing HAHA~ <\h2>";
         }
       }
