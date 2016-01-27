@@ -42,10 +42,10 @@ alert("YES");
       buttons: {
         "Delete all items": function() {
           $( this ).dialog( "close" );
-                  },
+        },
         Cancel: function() {
           $( this ).dialog( "close" );
-          document.getElementsByClassName("container")[0].innerHTML = "Bad answer! You can see nothing HAHA~";
+          document.getElementsByClassName("container")[0].innerHTML = "<h2>Bad answer! You can see nothing HAHA~ <\\h2>";
         }
       }
     });
