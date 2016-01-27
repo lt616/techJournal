@@ -25,9 +25,11 @@
 		<img src="bootstrap/scripts/1.png"/>
 	</div>
 
+	<div>
+
 	<div id="dialog-confirm" title="Empty the recycle bin?">
   <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
-</div>
+	</div>
 </div>
 
 	<script type="text/javascript">
@@ -40,9 +42,11 @@ alert("YES");
       buttons: {
         "Delete all items": function() {
           $( this ).dialog( "close" );
+          document.getElementById("")
         },
         Cancel: function() {
           $( this ).dialog( "close" );
+          document.getElementsByClassName("div")[0].innerHTML = "Bad answer! You can see nothing HAHA~";
         }
       }
     });
