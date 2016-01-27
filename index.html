@@ -33,7 +33,6 @@
 </div>
 
 	<script type="text/javascript">
-alert("YES");
   $(function() {
     $( "#dialog-confirm" ).dialog({
       resizable: false,
@@ -45,7 +44,7 @@ alert("YES");
         },
         Cancel: function() {
           $( this ).dialog( "close" );
-          document.getElementsByClassName("container")[0].innerHTML = "<h2>Bad answer! You can see nothing HAHA~ <\\h2>";
+          document.getElementsByClassName("container")[0].innerHTML = "<h2>Bad answer! You can see nothing HAHA~ <\h2>";
         }
       }
     });
