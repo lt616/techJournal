@@ -99,7 +99,7 @@ Use bootstrap from local (only for this directory): <br/>
 			</dd>
 			<dt> Jquery - Dynamic form </dt>
 			<dd>
-				<form classname="selector">
+				<form id="selector">
 					<button id="addOneInputText"> One more tag </button>
 				</form>
 			</dd>
@@ -109,7 +109,7 @@ Use bootstrap from local (only for this directory): <br/>
 
 	<script type="text/javascript">
 	$("#addOneInputText").click(function() {
-		$('.selector').append("<input type='text'/>");
+		$('#selector').append("<input type='text'/>");
 		alert("Yes");
 	});
 	</script>
