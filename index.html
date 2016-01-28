@@ -35,34 +35,11 @@
 	</div>
 
 	<div>
-
-	<div id="dialog-confirm" title="David David~">
-  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span> David, Cherry was in a mess yesterday and forgot to say good night to you :( <br/> Can you forgive her? </p>
-	</div>
-
-
 </div>
 
 	<script type="text/javascript">
-  $(function() {
-    $( "#dialog-confirm" ).dialog({
-      resizable: false,
-      height: 300,
-      width: 500,
-      modal: true,
-      buttons: {
-        "OK ~ I still love her :)": function() {
-          $( this ).dialog( "close" );
-          alert("Thank you ~ love you toooo");
-        },
-        "No, I won't forgive her, I won't talk with her any more!": function() {
-          $( this ).dialog( "close" );
-          document.getElementsByClassName("container")[0].innerHTML = "<h2>Bad answer! You can see nothing HAHA~ </h2>";
-        }
-      }
-    });
-  });
-
+		document.getElementById("backgroundMusic").loop = true;
+		alert("YES");
 	</script>
 </body>
 </html>
