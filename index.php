@@ -110,15 +110,16 @@
 			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
 			document.getElementById("journalReview").style.display = "block";
-			document.getElementById("journalReview").innerHTML = "<button type=\"button\" id=\"backToContext\">Back to context<\/button>" + xmlhttp.responseText;
+			document.getElementById("journalReview").innerHTML = "<button type=\"button\" click=\"backToContext()\">Back to context<\/button>" + xmlhttp.responseText;
 			document.getElementById("journalContext").style.display = "none";
 		});
 
-		$("#backToContext").click(function() {
+		function backToContext() {
 			alert("YES");
 			document.getElementById("journalReview").style.display = "none";
 			document.getElementById("journalContext").style.display = "block";
-		});
+		};
+		
 
 
 
