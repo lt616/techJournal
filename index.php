@@ -109,7 +109,7 @@
 	<?php
 		function readFile() {
 			echo "what";
-		}
+		};
 
 		readFile();
 		echo "what";
