@@ -119,7 +119,6 @@
 		});
 
 		$("#backToContext").click(function(){
-			alert("YES");
 			document.getElementById("journal").style.display = "none";
 			document.getElementById("journalContext").style.display = "block";
 		});
