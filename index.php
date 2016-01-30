@@ -122,7 +122,7 @@
 			fclose($myfile);
 		}
 
-		readFile("28-01-2016");
+		readFile("28-01-2016.html");
 	?>
 </body>
 </html>
