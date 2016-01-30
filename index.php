@@ -57,8 +57,8 @@
 	<div class="container">
 		<!-- Journal review module -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6">
-				<button type="button" click="backToContext()">Back to context</button>
+			<div class="col-xs-12 col-sm-12 col-md-6" id="journal">
+				<button class="btn btn-default" type="button" id="backToContext"> Back to context </button>
 				<div id="journalReview"></div>
 			</div>
 		</div>	
@@ -110,16 +110,16 @@
 			}
 			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
-			document.getElementById("journalReview").style.display = "block";
+			document.getElementById("journal").style.display = "block";
 			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
 			document.getElementById("journalContext").style.display = "none";
 		});
 
-		function backToContext() {
+		$("#backToContext").click(function(){
 			alert("YES");
-			document.getElementById("journalReview").style.display = "none";
+			document.getElementById("journal").style.display = "none";
 			document.getElementById("journalContext").style.display = "block";
-		};
+		});
 		
 
 
