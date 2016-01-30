@@ -108,12 +108,6 @@
 
 	<?php
 		echo "what";
-		function readFile() {
-			echo "what";
-		};
-
-		readFile();
-		echo "what";
 	?>
 </body>
 </html>
