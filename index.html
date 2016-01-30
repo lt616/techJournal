@@ -97,8 +97,15 @@
 
 		<!-- //load a journal -->
 		$(".journal").click(function() {
-			var value = this.innerHTML;
-			alert(value);
+			var fileName = this.innerHTML + ".html";
+			var file = new File(fileName);
+			file.open("r");
+			var str = "";
+			while (!file.eof) {
+				str += file.readln() + "\n";
+			}
+			file.close();
+			alert(str);
 		});
 
 	</script>
