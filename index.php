@@ -72,12 +72,12 @@
 		</div>
 
 		<!-- background music -->
-		<audio controls class="col-xs-6 col-sm-12 col-md-6 pull-right" id="backgroundMusic">
+		<audio controls class="col-xs-6 col-sm-6 col-md-6" id="backgroundMusic">
 			<source src="source/2.mp3" type="audio/mpeg">
 			Your browser does not support the audio element
 		</audio>
 
-		<div class="col-xs-6 col-sm-6 col-md-6 pull-right" id="celebration">
+		<div class="col-xs-6 col-sm-6 col-md-6" id="celebration">
 			4th Months <br/> Celebrate!
 		</div>
 
