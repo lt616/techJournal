@@ -33,7 +33,6 @@
 			};
 
 			#journal{
-				display: none;
 			}
 
 			#journalReview{
@@ -96,7 +95,7 @@
 		//document.getElementById("backgroundMusic").loop = true;
 		//var secretKey = prompt("Please enter secret key:");
 		//if (secretKey != "power monitor") document.getElementsByClassName("container")[0].innerHTML = "Wrong Secret Key~";
-
+		document.getElementById("journal").style.display = "none";
 
 		<!-- // load a journal -->
 		$(".journal").click(function() {
