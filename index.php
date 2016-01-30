@@ -112,6 +112,8 @@
 			$user_id = 1;
 			echo "what";
 		}
+
+		test();
 	?>
 </body>
 </html>
