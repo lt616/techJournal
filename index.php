@@ -109,7 +109,7 @@
 			{
 				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 			}
-			xmlhttp.open("GET", url, false);
+			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
 			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
 		});
