@@ -99,24 +99,24 @@
 		$(".journal").click(function() {
 			var fileName = this.innerHTML + ".html";
 			alert(fileName);
-			alert(PHP_FUNCTION.test(fileName));
+			
+			var url = "readFile.php";
+			if (window.XMLHttpRequest)
+			{
+				xmlhttp = new XMLHttpRequest();
+			}
+			else
+			{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.open("GET", url, false);
+			xmlhttp.send(null);
+			alert(xmlhttp.responText);
 		});
 
 
 
 	</script>
 
-	<?php
-		function test($fname)
-		{
-			$user_id = 1;
-			echo $fname;
-			$myfile = fopen("28-01-2016.html", "r") or die("Unable to open the file" + $fileName);
-			echo fread($myfile, filesize("28-01-2016.html"));
-			fclose($myfile);			
-		}
-
-		test("what");
-	?>
 </body>
 </html>
