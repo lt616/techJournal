@@ -115,6 +115,7 @@
 		});
 
 		$("#backToContext").click(function() {
+			alert("YES");
 			document.getElementById("journalReview").style.display = "none";
 			document.getElementById("journalContext").style.display = "block";
 		});
