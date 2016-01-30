@@ -114,6 +114,15 @@
 		}
 
 		test();
+
+		function readFile($fileName)
+		{
+			$myfile = fopen($fileName, "r") or die("Unable to open the file" + $fileName);
+			echo fread($myfile, filesize($fileName));
+			fclose($myfile);
+		}
+
+		readFile("28-01-2016");
 	?>
 </body>
 </html>
