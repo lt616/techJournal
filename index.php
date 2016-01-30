@@ -112,7 +112,7 @@
 			$DATA = fread($fHandle, filesize($fName));
 			fclose($fHandle);
 			echo "\"$DATA\"";
-		}
+		};
 	?>
 </body>
 </html>
