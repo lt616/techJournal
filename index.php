@@ -69,7 +69,7 @@
 			Your browser does not support the audio element
 		</audio>
 
-		<div id="celebration">
+		<div class="col-xs-12 col-sm-12" id="celebration">
 			4th Months <br/> Celebrate!
 		</div>
 
