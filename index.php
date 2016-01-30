@@ -69,7 +69,7 @@
 		<div id="journalContext">
 			<?php
 				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
-				echo fread($myfile, filesize("journalContext.html"));
+				echo "<dl>" + fread($myfile, filesize("journalContext.html")) + "</dl>";
 			?>
 		</div>
 
