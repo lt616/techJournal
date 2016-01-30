@@ -66,22 +66,12 @@
 		</div>
 
 		<!-- Journal Content -->
-		<dl>
-			<dt> <a href="25-01-2016.html"> 25-01-2016 </a> </dt>
-			<dd> Java - Sychronized arguments </dd>
-			<dd> Java - Generate random number </dd>
-			<dd> Apache - Set up home site on web host </dd>
-
-			<dt> <a href="http://www.arubystory.com/p/tutorials.html"> 26-01-2016 </a> </dt>
-			<dd> find a great tutorial for ruby on rails  </dd>
-
-			<dt> <a href="27-01-2016.html"> 27-01-2016 </a> </dt>
-			<dd> JAVA - Read/write a .csv file </dd>
-
-			<dt> <a class="journal" id="28-01-2016">28-01-2016</a> </dt>
-			<dd> STPF - Upload file to remote server </dd>
-			<dd> Bootstrap - Reference bootstrap </dd>
-		</dl>
+		<div id="journalContext">
+			<?php
+				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
+				echo fread($myfile, filesize("journalContext.html"));
+			?>
+		</div>
 
 		<div id="wish">
 			<span class="glyphicon glyphicon-heart" aria-hidden="true"> </span>
@@ -95,7 +85,8 @@
 		//var secretKey = prompt("Please enter secret key:");
 		//if (secretKey != "power monitor") document.getElementsByClassName("container")[0].innerHTML = "Wrong Secret Key~";
 
-		<!-- //load a journal -->
+
+		<!-- // load a journal -->
 		$(".journal").click(function() {
 			var fileName = this.innerHTML + ".html";
 			alert(fileName);
