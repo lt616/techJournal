@@ -84,9 +84,7 @@
 			4th Months <br/> Celebrate!
 		</div>
 
-		<div id="wish">
-			<span class="glyphicon glyphicon-heart" aria-hidden="true"> </span>
-		</div>
+		
 
 	</div>
 </div>
