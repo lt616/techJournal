@@ -57,8 +57,9 @@
 	<div class="container">
 		<!-- Journal review module -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6" id="journalReview">
-
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<button type="button" click="backToContext()">Back to context</button>
+				<div id="journalReview"></div>
 			</div>
 		</div>	
 
@@ -110,7 +111,7 @@
 			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
 			document.getElementById("journalReview").style.display = "block";
-			document.getElementById("journalReview").innerHTML = "<button type=\"button\" click=\"backToContext()\">Back to context<\/button>" + xmlhttp.responseText;
+			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
 			document.getElementById("journalContext").style.display = "none";
 		});
 
