@@ -47,6 +47,13 @@
 		</div>
 	</nav>
 	<div class="container">
+		<!-- Journal review module -->
+		<div class="row">
+			<div class="col-xs-12" id="journalReview">
+
+			</div>
+		</div>	
+
 
 		<!-- background music -->
 		<audio controls id="backgroundMusic">
@@ -71,7 +78,7 @@
 			<dt> <a href="27-01-2016.html"> 27-01-2016 </a> </dt>
 			<dd> JAVA - Read/write a .csv file </dd>
 
-			<dt> <a href="28-01-2016.html"> 28-01-2016 </a> </dt>
+			<dt> <a class="journal" id="28-01-2016"> 28-01-2016 </a> </dt>
 			<dd> STPF - Upload file to remote server </dd>
 			<dd> Bootstrap - Reference bootstrap </dd>
 		</dl>
@@ -87,6 +94,13 @@
 		document.getElementById("backgroundMusic").loop = true;
 		var secretKey = prompt("Please enter secret key:");
 		if (secretKey != "power monitor") document.getElementsByClassName("container")[0].innerHTML = "Wrong Secret Key~";
+
+		<!-- //load a journal -->
+		$(".journal").click(function() {
+			var value = $(this).innerHTML;
+			alert(value);
+		});
+
 	</script>
 </body>
 </html>
