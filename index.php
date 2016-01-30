@@ -107,6 +107,7 @@
 	</script>
 
 	<?php
+		echo "what";
 		function readFile() {
 			echo "what";
 		};
