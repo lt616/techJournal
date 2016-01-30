@@ -71,6 +71,7 @@
 			?>
 		</div>
 
+		<div id="homePage">
 		<!-- background music -->
 		<audio controls class="col-xs-6 col-sm-6 col-md-6" id="backgroundMusic">
 			<source src="source/2.mp3" type="audio/mpeg">
@@ -79,6 +80,7 @@
 
 		<div class="col-xs-6 col-sm-6 col-md-6" id="celebration">
 			4th Months <br/> Celebrate!
+		</div>
 		</div>
 
 		
@@ -111,11 +113,13 @@
 			document.getElementById("journal").style.display = "block";
 			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
 			document.getElementById("journalContext").style.display = "none";
+			document.getElementById("homePage").style.display = "none";
 		});
 
 		$("#backToContext").click(function(){
 			document.getElementById("journal").style.display = "none";
 			document.getElementById("journalContext").style.display = "block";
+			document.getElementById("homePage").style.display = "block";
 		});
 		
 
