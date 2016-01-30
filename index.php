@@ -60,14 +60,14 @@
 	<div class="container">
 		<!-- Journal review module -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6" id="journal">
+			<div class="col-xs-12 col-sm-6 col-md-6" id="journal">
 				<button class="btn btn-default" type="button" id="backToContext"> Back to context </button>
 				<div id="journalReview"></div>
 			</div>
-		</div>	
+		</div>
 
 		<!-- Journal Content -->
-		<div class="col-xs-12 col-sm-12 col-md-6" id="journalContext">
+		<div class="col-xs-12 col-sm-6 col-md-6" id="journalContext">
 			<?php
 				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
 				echo "<dl>" . fread($myfile, filesize("journalContext.html")) . "</dl>";
@@ -75,12 +75,12 @@
 		</div>
 
 		<!-- background music -->
-		<audio controls class="col-sm-12 col-md-6" id="backgroundMusic">
+		<audio controls class="col-xs-6 col-sm-12 col-md-6" id="backgroundMusic">
 			<source src="source/2.mp3" type="audio/mpeg">
 			Your browser does not support the audio element
 		</audio>
 
-		<div class="col-xs-12 col-sm-12 col-md-6" id="celebration">
+		<div class="col-xs-12 col-sm-6 col-md-6" id="celebration">
 			4th Months <br/> Celebrate!
 		</div>
 
