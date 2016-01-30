@@ -25,12 +25,20 @@
 
 			.glyphicon{
 				font-size: 45px;
-			}
+			};
 
 			#wish{
 				width: 50px;
 				height: 50px;
-			}
+			};
+
+			#journalReview{
+				display: none;
+			};
+
+			#journalContext{
+				display: block;
+			};
 	</style>
 
 </head>
@@ -49,7 +57,7 @@
 	<div class="container">
 		<!-- Journal review module -->
 		<div class="row">
-			<div class="col-xs-12" id="journalReview">
+			<div class="col-xs-12 col-sm-12" id="journalReview">
 
 			</div>
 		</div>	
@@ -66,7 +74,7 @@
 		</div>
 
 		<!-- Journal Content -->
-		<div id="journalContext">
+		<div class="col-xs-12 col-sm-12" id="journalContext">
 			<?php
 				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
 				echo "<dl>" . fread($myfile, filesize("journalContext.html")) . "</dl>";
@@ -102,7 +110,9 @@
 			}
 			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
+			document.getElementById("journalReview").style.display = block;
 			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
+			document.getElementById("journalContext").style.display = none;
 		});
 
 
