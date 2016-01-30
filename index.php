@@ -111,7 +111,7 @@
 			}
 			xmlhttp.open("GET", url, false);
 			xmlhttp.send(null);
-			alert(xmlhttp.responText);
+			alert(xmlhttp.responseText);
 		});
 
 
