@@ -32,8 +32,12 @@
 				height: 50px;
 			};
 
-			#journalReview{
+			#journal{
 				display: none;
+			}
+
+			#journalReview{
+
 			};
 
 			#journalContext{
