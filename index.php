@@ -107,7 +107,6 @@
 	</script>
 
 	<?php
-		echo "what";
 		function test()
 		{
 			$user_id = 1;
