@@ -107,13 +107,13 @@
 	</script>
 
 	<?php
-		function test()
+		function test($fname)
 		{
 			$user_id = 1;
-			echo "what";
+			echo $fname;
 		}
 
-		test();
+		test("what");
 
 		//function readFile($fileName)
 		//{
