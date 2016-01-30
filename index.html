@@ -91,13 +91,13 @@
 </div>
 
 	<script type="text/javascript">
-		document.getElementById("backgroundMusic").loop = true;
-		var secretKey = prompt("Please enter secret key:");
-		if (secretKey != "power monitor") document.getElementsByClassName("container")[0].innerHTML = "Wrong Secret Key~";
+		//document.getElementById("backgroundMusic").loop = true;
+		//var secretKey = prompt("Please enter secret key:");
+		//if (secretKey != "power monitor") document.getElementsByClassName("container")[0].innerHTML = "Wrong Secret Key~";
 
 		<!-- //load a journal -->
 		$(".journal").click(function() {
-			var value = $(this).innerHTML;
+			var value = this.innerHTML;
 			alert(value);
 		});
 
