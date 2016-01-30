@@ -99,7 +99,7 @@
 		$(".journal").click(function() {
 			var fileName = this.innerHTML + ".html";
 			alert(fileName);
-			//alert(PHP_FUNCTION.readFile(fileName));
+			alert(PHP_FUNCTION.test(fileName));
 		});
 
 
