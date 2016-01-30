@@ -107,12 +107,7 @@
 	</script>
 
 	<?php
-		function readFile($fName) {
-			$fHandle = fopen($fName, 'r');
-			$DATA = fread($fHandle, filesize($fName));
-			fclose($fHandle);
-			echo "\"$DATA\"";
-		};
+		echo "what";
 	?>
 </body>
 </html>
