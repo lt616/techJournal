@@ -57,7 +57,7 @@
 	<div class="container">
 		<!-- Journal review module -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-6" id="journal">
+			<div class="col-xs-12 col-sm-12 col-md-12" id="journal">
 				<button class="btn btn-default" type="button" id="backToContext"> Back to context </button>
 				<div id="journalReview"></div>
 			</div>
