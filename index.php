@@ -110,9 +110,9 @@
 			}
 			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
-			document.getElementById("journalReview").style.display = block;
+			document.getElementById("journalReview").style.display = "block";
 			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
-			document.getElementById("journalContext").style.display = none;
+			document.getElementById("journalContext").style.display = "none";
 		});
 
 
