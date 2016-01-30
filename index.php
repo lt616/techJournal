@@ -111,7 +111,7 @@
 			}
 			xmlhttp.open("GET", url, false);
 			xmlhttp.send(null);
-			alert(xmlhttp.responseText);
+			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
 		});
 
 
