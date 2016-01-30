@@ -13,9 +13,6 @@
 	<!-- internal css -->
 	<style type="text/css">
 			#celebration{
-				width: 500px;
-				height: 300px;
-				float: right;
 				padding-left: 35px;
 				padding-top: 22px;
 				color: #000000;
@@ -80,7 +77,7 @@
 			Your browser does not support the audio element
 		</audio>
 
-		<div class="col-xs-12 col-sm-6 col-md-6 pull-right" id="celebration">
+		<div class="col-xs-6 col-sm-6 col-md-6 pull-right" id="celebration">
 			4th Months <br/> Celebrate!
 		</div>
 
