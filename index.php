@@ -111,6 +111,7 @@
 		function test()
 		{
 			$user_id = 1;
+			echo "what";
 		}
 	?>
 </body>
