@@ -71,12 +71,12 @@
 		</div>
 
 		<!-- background music -->
-		<audio controls id="backgroundMusic">
+		<audio controls class="col-sm-12 col-md-6" id="backgroundMusic">
 			<source src="source/2.mp3" type="audio/mpeg">
 			Your browser does not support the audio element
 		</audio>
 
-		<div class="col-xs-12 col-sm-12" id="celebration">
+		<div class="col-xs-12 col-sm-12 col-md-6" id="celebration">
 			4th Months <br/> Celebrate!
 		</div>
 
@@ -110,8 +110,13 @@
 			xmlhttp.open("GET", url + "?FNAME=" + fileName, false);
 			xmlhttp.send(null);
 			document.getElementById("journalReview").style.display = "block";
-			document.getElementById("journalReview").innerHTML = xmlhttp.responseText;
+			document.getElementById("journalReview").innerHTML = "<button type=\"button\" id=\"backToContext\">Back to context<\/button>" + xmlhttp.responseText;
 			document.getElementById("journalContext").style.display = "none";
+		});
+
+		$("#backToContext").click(function() {
+			document.getElementById("journalReview").style.display = "none";
+			document.getElementById("journalContext").style.display = "block";
 		});
 
 
