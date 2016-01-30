@@ -78,7 +78,7 @@
 			<dt> <a href="27-01-2016.html"> 27-01-2016 </a> </dt>
 			<dd> JAVA - Read/write a .csv file </dd>
 
-			<dt> <a class="journal" id="28-01-2016"> 28-01-2016 </a> </dt>
+			<dt> <a class="journal" id="28-01-2016">28-01-2016</a> </dt>
 			<dd> STPF - Upload file to remote server </dd>
 			<dd> Bootstrap - Reference bootstrap </dd>
 		</dl>
@@ -106,6 +106,13 @@
 
 	</script>
 
-	
+	<?php
+		function readFile($fName) {
+			$fHandle = fopen($fName, 'r');
+			$DATA = fread($fHandle, filesize($fName));
+			fclose($fHandle);
+			echo "\"$DATA\"";
+		}
+	?>
 </body>
 </html>
