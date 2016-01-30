@@ -57,11 +57,18 @@
 	<div class="container">
 		<!-- Journal review module -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-12" id="journalReview">
+			<div class="col-xs-12 col-sm-12 col-md-6" id="journalReview">
 
 			</div>
 		</div>	
 
+		<!-- Journal Content -->
+		<div class="col-xs-12 col-sm-12 col-md-6" id="journalContext">
+			<?php
+				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
+				echo "<dl>" . fread($myfile, filesize("journalContext.html")) . "</dl>";
+			?>
+		</div>
 
 		<!-- background music -->
 		<audio controls id="backgroundMusic">
@@ -71,14 +78,6 @@
 
 		<div class="col-xs-12 col-sm-12" id="celebration">
 			4th Months <br/> Celebrate!
-		</div>
-
-		<!-- Journal Content -->
-		<div class="col-xs-12 col-sm-12" id="journalContext">
-			<?php
-				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
-				echo "<dl>" . fread($myfile, filesize("journalContext.html")) . "</dl>";
-			?>
 		</div>
 
 		<div id="wish">
