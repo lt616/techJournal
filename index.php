@@ -108,6 +108,10 @@
 
 	<?php
 		echo "what";
+		function test()
+		{
+			$user_id = 1;
+		}
 	?>
 </body>
 </html>
