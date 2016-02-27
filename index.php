@@ -39,6 +39,10 @@
 			#journalContext{
 				display: block;
 			};
+
+			dt{
+				
+			}
 	</style>
 
 </head>
