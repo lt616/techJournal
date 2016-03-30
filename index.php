@@ -83,7 +83,8 @@
 		</audio>
 
 		<div class="col-xs-6 col-sm-6 col-md-6" id="celebration">
-			6th Month <br/> Celebrate!
+			6th Month <br/> Celebrate! 
+			test / test, why doesn't work?
 		</div>
 		</div>
 
