@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title> Technical Journals </title>
-	<meta name=""
   	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -18,31 +17,32 @@
 				color: #000000;
 				font-size: 5em;
 				background-image: url("source/celebration.jpg");
-			};
+			}
 
 			.glyphicon{
 				font-size: 45px;
-			};
+			}
 
 			#wish{
 				width: 50px;
 				height: 50px;
-			};
-
-			#journal{
 			}
 
 			#journalReview{
 
-			};
+			}
 
 			#journalContext{
 				display: block;
-			};
-
-			dt{
-				
 			}
+
+			#task{
+				font-size: 1.3em;
+				background-color: #ffffff;
+				color: #000000;
+			}
+
+			
 	</style>
 
 </head>
@@ -67,24 +67,40 @@
 			</div>
 		</div>
 
-		<!-- Journal Content -->
-		<div class="col-xs-12 col-sm-6 col-md-6" id="journalContext">
-			<?php
-				$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
-				echo "<dl>" . fread($myfile, filesize("journalContext.html")) . "</dl>";
-			?>
-		</div>
+		<div class="row">
+			<!-- Journal Content -->
+			<div class="col-xs-12 col-sm-6 col-md-6" id="journalContext">
+				<?php
+					$myfile = fopen("journalContext.html", "r") or die("Cannot open file journalContext.html");
+					echo "<dl>" . fread($myfile, filesize("journalContext.html")) . "</dl>";
+				?>
+			</div>
 
-		<div id="homePage">
-		<!-- background music -->
-		<audio controls class="col-xs-6 col-sm-6 col-md-6" id="backgroundMusic">
-			<source src="source/2.mp3" type="audio/mpeg">
-			Your browser does not support the audio element
-		</audio>
+			<!-- Add a Journal -->
+			<button type="button" class="btn btn-primary"> Create a new Journal </button>
 
-		<div class="col-xs-6 col-sm-6 col-md-6" id="celebration">
-			6th Month <br/> Celebrate! 
-		</div>
+			<div id="homePage" class="col-xs-6 col-sm-6 col-md-6">
+				<!-- background music -->
+				<audio controls class="row" id="backgroundMusic">
+					<source src="source/2.mp3" type="audio/mpeg">
+					Your browser does not support the audio element
+				</audio>
+
+				<div class="row" id="celebration">
+					6th Month <br/> Celebrate! 
+				</div>
+
+				<!-- Recent tasks -->
+				<div class="row" id="task">
+					<ol>
+						<li> Build automical creation for journals </li>
+						<li> Build project studio </li>
+						<li> Set up CGI server </li>
+						<li> Build resume page </li>
+						<li> Setup 6fu studio </li>
+					</ol>
+				</div>
+			</div>
 		</div>
 
 		
@@ -125,7 +141,9 @@
 			document.getElementById("journalContext").style.display = "block";
 			document.getElementById("homePage").style.display = "block";
 		});
-		
+
+		<!-- //edit a journal -->
+
 
 
 

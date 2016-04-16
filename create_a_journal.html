@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title> Technical Journals - Create a New Journal </title>
+  	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  	<link rel="stylesheet" href="bootstrap/styles/bootstrap.min.css">
+	<script src="bootstrap/scripts/bootstrap.min.js"></script>
+	<script src="bootstrap/scripts/jquery-2.1.4.min.js"></script>
+
+	<!-- internal css -->
+	<style type="text/css">
+		label{
+			padding-left: 40px;
+			font-size: 1.3em;
+		}
+
+		#journal_creation{
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<!-- Navigate bar -->
+	<nav class="navbar navbar-default fixed-to-top">
+		<div class="container-fuild">
+			<div class="navbar-header">
+				<h1 class="navbar-text"> Technical Journals </h1>
+			</div>
+			<div class="navbar-right">
+				<h2 class="navbar-text"> AXJLlt <i> loves </i> David very very much :) </h2>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<!-- Add a Journal -->
+		<div id="journal_creation">
+			<form method="POST" action="create_a_journal.php">
+				<div class="input-group col-md-12">
+					
+					<div class="row">
+						<!-- Input for date | must in dd/mm/yy format -->
+						<div class="col-md-2">
+							<label> Date: </label>
+						</div>
+						<div class="col-md-2">
+							<input type="text" class="form-control" placeholder="dd/mm/yy" size="10">
+						</div>
+					</div>
+					<br/>
+
+					<!-- Input for key word | delimited by ";" -->
+					<div class="row">
+						<div class="col-md-2">
+							<label> Keywords: </label>
+						</div>
+						<div class="col-md-4">
+							<input type="text"  class="form-control" placeholder="Plz split by semi-colom" size="20"> 
+						</div>
+					</div>
+					<hr/>
+
+
+					<!-- Input for title -->
+					<div class="row">
+						<div class="col-md-2">
+							<label> Title: </label>
+						</div>
+						<div class="col-md-6">
+							<input type="text"  class="form-control" size="20"> 
+						</div>
+					</div>
+					<br/>
+
+
+					<!-- Input for reference -->
+					<div class="row">
+						<div class="col-md-2">
+							<label> Reference: </label>
+						</div>
+						<div class="col-md-6">
+							<input type="text"  class="form-control" size="20"> 
+						</div>
+					</div>
+					<hr/>										
+
+
+					<!-- Input for context -->
+					<div class="row">
+						<div class="col-md-2">
+							<label> Context: </label>
+						</div>
+						<br/>
+						<div class="col-md-8">
+							<textarea class="form-control" rows="8" cols="60">  </textarea>
+						</div>
+					</div>
+					<br/> <br/>
+
+					<!-- Button group -->
+					<div class="row">
+						<div class="col-md-2 col-md-offset-2">
+							<button class="btn btn-primary" type="submit"> Push </button>
+						</div>
+						<div class="col-md-2">
+							<button class="btn btn-primary" type="button" ref="/index.php"> cancel </button>		
+						</div>
+
+					</div>
+				</div>
+
+			</form>			
+		</div>
+
+
+
+		
+
+	</div>
+</div>
+
+<script type="text/javascript">
+		<!-- //edit a journal -->
+
+
+
+
+	</script>
+
+</body>
+</html>
