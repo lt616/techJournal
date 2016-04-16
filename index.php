@@ -29,11 +29,12 @@
 			}
 
 			#journalReview{
-				font-size: 1.2em;
+
 			}
 
 			#journalContext{
 				display: block;
+				font-size: 1.2em;
 			}
 
 			#task{
