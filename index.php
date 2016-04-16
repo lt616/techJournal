@@ -28,12 +28,8 @@
 				height: 50px;
 			}
 
-			#journal{
-				font-size: 1.2em;
-			}
-
 			#journalReview{
-
+				font-size: 1.2em;
 			}
 
 			#journalContext{
