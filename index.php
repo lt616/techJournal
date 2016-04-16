@@ -76,19 +76,24 @@
 				?>
 			</div>
 
-			<!-- Add a Journal -->
-			<button type="button" class="btn btn-primary"> Create a new Journal </button>
-
 			<div id="homePage" class="col-xs-6 col-sm-6 col-md-6">
+				<div class="row">
+					<!-- Add a Journal -->
+					<button type="button" class="btn btn-primary"> Create a new Journal </button>
+				</div>
+				<br/>
+
 				<!-- background music -->
 				<audio controls class="row" id="backgroundMusic">
 					<source src="source/2.mp3" type="audio/mpeg">
 					Your browser does not support the audio element
 				</audio>
+				<br/>
 
 				<div class="row" id="celebration">
 					6th Month <br/> Celebrate! 
 				</div>
+				<br/>
 
 				<!-- Recent tasks -->
 				<div class="row" id="task">
