@@ -1,0 +1,12 @@
+
+		<h2> 28-01-2015 </h2>
+		<dl>
+			<dt> C - function prototype doesn't work with zero argument </dt>
+			<dd> Error: no previous prototype for function(). But &lt;return_type:&gt; function(); is specified in corresponding .h file.
+				<br/>
+				That's because compiler recognize zero argument as argument list equals to void.
+				<br/>
+				Solution: change function prototype to &lt; return_type &gt; function(void);
+				<br/>
+			</dd>
+		</dl>
