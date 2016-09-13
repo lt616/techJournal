@@ -55,7 +55,7 @@
 				<h1 class="navbar-text"> Technical Journals </h1>
 			</div>
 			<div class="navbar-right">
-				<h2 class="navbar-text"> AXJLlt <i> loves </i> David very very much :) </h2>
+				<h2 class="navbar-text"> AXJLlt still <i> loves </i> David very very much :) </h2>
 			</div>
 		</div>
 	</nav>
@@ -92,7 +92,7 @@
 				<br/>
 
 				<div class="row" id="celebration">
-					6th Month <br/> Celebrate! 
+					11 Months <br/> Celebrate! 
 				</div>
 				<br/>
 
