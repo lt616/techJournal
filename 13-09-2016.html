@@ -17,9 +17,121 @@
 					<li> Installation link: http://doc.scrapy.org/en/0.24/intro/install.html </li>
 					<li> Scrapy tutorial: http://doc.scrapy.org/en/0.24/intro/tutorial.html </li>
 				</ul>
-				<br/>
-				
+				<hr/>
+				Usage:
+					First download the project example from the tutorial site.
+					<br/>
+					The structure like this:
+					<pre>
+		-tutorial
+			-items.py
+			-spiders
+				-..
+			..
+					</pre>
+				<ol>
+					<li> Put the description inside 'item.py':
+						<pre>
+	class PopularNameItem(scrapy.Item):		# 'PopularName' is the name of spider
+		title = scrapy.Field()
+		link = scrapy.Field()
+		desc = scrapy.Field()
+						</pre>
+					</li>
+					<li>
+						Write a spider under and put it under folder 'spiders', the file name doesn't matter.
+						<br/>
+						Basically, to define a spider you need to specify the 'name' and 'start_urls'.
+						<br/>
+						You also need a 'parse()' function, which define the activity the spider should do to obtain the information you want.
+						<br/>
+						e.g.
+						<pre>
+		from scrapy.spider import BaseSpider
+		from scrapy.selector import HtmlXPathSelector
+		import scrapy
+		import os
+		import re
 
+		class BlogSpider(scrapy.Spider):
+			name = 'popularBrands'
+			start_urls = ['http://www.calorieking.com/foods/']
+
+			def parse(self, response):
+				curPath = os.getcwd()
+
+				with open("index.html", 'w') as f:
+					for string in response.xpath('//div[@id="popular-brands"]/ul/li/a').extract():
+						# label.group(1) is the food classification name
+						# url.group(1) is the food classification name
+						label = re.search('\&gt;([^\&gt;^\&lt;]*)\&lt;', string)
+						f.write(label.group(1))
+						f.write("&lt;br/&gt;")
+						url = re.search('href\=\"([^\"\']*)\"', string)
+						f.write(url.group(1))
+						f.write("&lt;hr/&gt;")
+
+
+						# Create sub-directory if necessary
+						if not os.path.exists(curPath + "/data/food/" + label.group(1)):
+							os.makedirs(curPath + "/data/food/" + label.group(1))
+		
+						# Write the index url inside each sub-directory's index.html
+						with open(curPath + "/data/food/" + label.group(1) + "/index.html", "w") as f1:
+							f1.write(url.group(1))
+						</pre>
+						<br/>
+
+						Then from terminal, go to the 'tutorial' folder and run "Scrapy crawl 'spiderName'"
+					</li>
+					<li>
+						Another example shows how to pass arguments to spider:
+						e.g.
+						<pre>
+		from scrapy.spider import BaseSpider
+		from scrapy.selector import HtmlXPathSelector
+		import scrapy
+		import os
+		import re
+
+		class BlogSpider(scrapy.Spider):
+			name = 'popularFoods'   
+
+
+			#curPath = os.getcwd()
+
+			def __init__(self, sub_name=''):
+				curPath = os.getcwd()
+				temp = ""
+				with open(curPath + "/data/food/" + sub_name + "/index.html", "r") as f:
+					for line in f:
+						temp_url = line
+				self.start_urls = [line]
+				self.sub_name = sub_name
+
+			def parse(self, response):
+				curPath = os.getcwd()
+
+				with open(curPath + "/data/food/" + self.sub_name + "/sub_name.html", "w") as f:
+					for string in response.xpath('//div[@id="popular-foods"]/ul/li/a').extract():
+						# label.group(1) is the food classification name
+						# url.group(1) is the food classification name
+						label = re.search('\&gt;([^\&gt;^\&lt;]*)\&lt;', string)
+						f.write(label.group(1))
+						f.write("&lt;br/&gt;")
+						url = re.search('href\=\"([^\"\']*)\"', string)
+						f.write(url.group(1))
+						f.write("&lt;hr/&gt;")
+						</pre>
+						<br/>
+						The function '__init__' will be executed to initial spider. User can pass arguments to the spider through initial function as parameters, define them as properties of spider itself, which is under 'self' object.
+						<br/>
+						From command, it should write as "Scrapy crawl 'spiderName' -a 'argu01Name'='argu01' -a 'argu02Name'='argu02'"
+					</li>
+				</ol>
+
+				<hr/>
+					Link to my first web crawl will be pushed sooner ..
 			</dd>
 		</dl>
 	</div>
