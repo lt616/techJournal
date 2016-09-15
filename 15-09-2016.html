@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Black Wolf - Technical journal </title>
+	<link rel="stylesheet" href="bootstrap/styles/bootstrap.min.css">
+	<script src="bootstrap/scripts/bootstrap.min.js"></script>
+	<script src="bootstrap/scripts/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2> 15-09-2016 </h2>
+		<dl>
+			<dt> Jason - Parsed with python </dt>
+			<dd> Jason has 2 complex data types, array and object, which need to be parsed when you want to analyse the information bind with it. Here we talk about how to parse jason data using python.
+			e.g.
+			<pre>
+			import requests
+			import json
+
+			food_id = "01009"
+			r = requests.get('http://api.nal.usda.gov/ndb/reports/?ndbno=09427&amp;type=f&amp;format=json&amp;api_key=CUR7LCIwsCLTDq1UI5STCloAG7rAUuX7fTLfPvVN').text
+			j = json.loads(r)
+			</pre>
+				<ol>
+					<li> <h3> Array </h3> <br/>
+					You can access Array by index:
+						<pre>
+			print(j['list']['item'][0]['id'])	# '0' represent the first item inside the array
+						</pre>
+					</li>
+					<li> <h3> Object </h3> <br/>
+					You can access Array by key:
+			print(j['list']['item'])
+					</li>
+				</ol>
+			</dd>
+		</dl>
+	</div>
+</body>
+</html>
