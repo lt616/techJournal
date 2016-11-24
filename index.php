@@ -15,7 +15,7 @@
 				padding-left: 35px;
 				padding-top: 22px;
 				color: #000000;
-				font-size: 5em;
+				font-size: 3em;
 				background-image: url("source/celebration.jpg");
 			}
 
@@ -55,7 +55,8 @@
 				<h1 class="navbar-text"> Technical Journals </h1>
 			</div>
 			<div class="navbar-right">
-				<h2 class="navbar-text"> AXJLlt still <i> loves </i> David very very much :) </h2>
+				<!-- Dear, I'm gonna leave u from this moment
+				<h2 class="navbar-text"> AXJLlt still <i> loves </i> David very very much :) </h2> -->
 			</div>
 		</div>
 	</nav>
@@ -92,7 +93,8 @@
 				<br/>
 
 				<div class="row" id="celebration">
-					11 Months <br/> Celebrate! 
+					Forgot what doesn't <br/> belong to u
+					<!-- 11 Months <br/> Celebrate! -->
 				</div>
 				<br/>
 
